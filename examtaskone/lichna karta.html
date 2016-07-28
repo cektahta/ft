@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <style>
+        #front {
+            width: 400px;
+            height: 200px;
+            background-color: antiquewhite;
+            border-radius: 10px;
+            margin: 100px;
+            display: inline-block;
+
+            box-shadow: 10px 10px 5px #888888;
+
+
+        }
+        #header {
+            width:380px;
+            height: 32px;
+            background-color: aquamarine;
+            margin-top: 8px;
+            margin-left: 10px;
+            position: absolute;
+            display: inline-block;
+            font-size: 8px;
+            font-weight: bold;
+            font-family: Arial;
+
+        }
+        #left_top {
+            top: 3px;
+            left: 280px;
+            position: absolute;
+
+
+        }
+        #right_top {
+        top: 3px;
+            left: 50px;
+            position: absolute;
+
+        }
+        #pic {
+            width: 80px;
+            height: 100px;
+            border: 1px solid black;
+            margin-top: 60px;
+            margin-left: 10px;
+            background-image: url("head.jpg");
+            background-size: cover
+        ;
+        }
+        #container {
+            font-size: 10px;
+            float: right;
+
+        }
+        #float {
+            position: absolute;
+            top: 160px;
+            left: 220px;
+        }
+        span {
+            margin-right: 10px;
+        }
+        .info {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div id="front">
+    <div id="header">
+        <div id="bgmap"><img src="bulgaria_flag.jpg" width="13%"></div>
+        <ul id="left_top">
+            <li>ЕВРОПЕЙСКИ СЪЮЗ</li>
+            <li>РЕПУБЛИКА БЪЛГАРИЯ</li>
+            <li>ЛИЧНА КАРТА</li>
+        </ul>
+
+        <ul id="right_top">
+            <li>EUROPEAN UNION</li>
+            <li>REPUBLIC OF BULGARIA</li>
+            <li>IDENTITY CARD</li>
+        </ul>
+
+    </div>
+   <div id="pic"></div>
+    <div id="container">
+
+        <div id="left">
+
+            <div id="float">
+                <div class="line"><span>Фамилия</span><span class="info">Иванов</span></div>
+                <div class="line"><span>Surname</span><span class="info">Ivanov</span></div>
+                <div class="line"><span>Име</span><span class="info">Николай</span></div>
+                <div class="line"><span>Name</span> <span class="info">Nikolay</span></div>
+                <div class="line"> <span>Презиме</span><span class="info">Цветанов</span></div>
+                <div class="line"><span>Father's name</span><span class="info">Tsvetanov</span></div>
+                <div class="line"><span>ЕГН/Personal No</span><span class="info">0000000000</span>
+                    <span class="info">Пол/Sex</span><span class="info"> М/М</span> </div>
+                <div class="line"><span>Гражданство/Nationality</span><span class="info">България/BGR</span></div>
+                <div class="line"><span>Дата на раждане/Date of birth</span><span class="info">27.01.1990</span></div>
+                <div class="line"><span>Валидност/Date of Expiry</span><span class="info">00.00.2016</span></div>
+                <div class="line"><span>№ на документа/Document number</span><span class="info" id="dnumber">999999999</span></div>
+            </div>
+        </div>
+        <footer>
+            <p id="podpis">Подпис/Signature</p>
+        </footer>
+    </div>
+</div>
+<div id="back">
+
+</div>
+
+</body>
+</html>

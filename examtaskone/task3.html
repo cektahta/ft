@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <script type = "text/javascript" src = "ajax.js"></script>
+    <style>
+        #colors {
+            width:500px;
+            height: 500px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="wrapper">
+
+    <button id="button" type="button" name="button">Click me !</button>
+
+    <div id="colors"></div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded",function (){
+
+        var colors;
+        document.getElementById("button").addEventListener("click",changeColor,false);
+
+        Ajax.request('GET', 'server3.php', true, function(response) {
+
+
+            colors = JSON.parse(response);
+
+        });
+
+
+        function changeColor(){
+            var div = document.getElementById("colors");
+
+            var id=0;
+
+            setInterval(colorChanger , 1000);
+
+            function colorChanger(){
+                div.style.backgroundColor = "#"+colors[id];
+
+                if(id == 2){
+                    id = 0;
+                }else{
+                    id++;
+                }
+            }
+
+        }
+    },false)
+</script>
+
+</body>
+</html>
